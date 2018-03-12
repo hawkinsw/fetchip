@@ -118,7 +118,7 @@ int main(int argc, char **argv) {
 	clipboard = gtk_clipboard_get(GDK_NONE);
 	gtk_clipboard_set_text(clipboard, clipboard_text, -1);
 
-	if (fetch_success) {
+	if (fetch_success && use_clipboard) {
 		cout << "Press Ctrl-C after you paste the address from the clipboard...\n";
 		gtk_main();
 	}
